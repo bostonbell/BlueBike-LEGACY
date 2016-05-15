@@ -7,4 +7,3 @@ $('#fullpage').fullpage({
 });
 });
 
-$('body').scrollspy({target: '#navbar-example'});
