@@ -1,0 +1,46 @@
+var slideIndex = 1;
+sliding = false;
+$(document).ready(function() {
+$(document).ready(function() {
+$('#fullpage').fullpage({
+
+    sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+    scrollingSpeed:1000,
+    css3: true,
+
+    onLeave: function(index, nextIndex, direction) {
+
+        if(index == 2 && !sliding) {
+
+            if(direction == 'down' && slideIndex < 5) {
+
+                sliding = true;
+                $.fn.fullpage.moveSlideRight();
+                slideIndex++;
+                return false;
+
+            } else if(direction == 'up' && slideIndex > 1) {
+
+                sliding = true;
+                $.fn.fullpage.moveSlideLeft();
+                slideIndex--;
+                return false;
+
+            }
+
+        } else if(sliding) {
+
+            return false;
+
+        }
+
+    },
+
+    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+
+        sliding = false;
+
+    }
+
+});
+});

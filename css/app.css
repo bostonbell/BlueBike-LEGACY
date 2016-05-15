@@ -1,0 +1,138 @@
+/*
+Regular typography for site.
+*/
+body{
+    font-family: 'Roboto', sans-serif, arial;
+}
+
+/*
+Full screen background for individual portions of our site. *
+*/
+.bg-bluebike
+{
+    background: url("../../img/asset-blue-bike-intro.png") no-repeat center center;
+    background-size: cover;
+}
+
+.bg-stars
+{
+    background: url("../../img/asset-stars.jpg") no-repeat center center;
+    z-index: 0;
+}
+
+.bg-cars
+{
+    background: url("../../img/asset-cars.jpg") no-repeat center center;
+    z-index: 0;
+}
+
+
+/*
+Responsive half split on stars background 
+*/
+@media screen and (min-width: 768px)
+{
+    .bg-stars-color:after
+    {
+        content: '';
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top:0;
+        left:33%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .bg-stars-color:after
+    {
+        content: '';
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top:40%;
+        left:0%;
+        background: rgba(0, 0, 0, 1);
+        z-index: -1;
+    }
+}
+
+/*
+Responsive third split split on cars background 
+*/
+@media screen and (min-width: 768px)
+{
+    .bg-cars-color:after
+    {
+        content: '';
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top:0;
+        right:35%;
+        background: rgba(0, 0, 0, 1);
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .bg-cars-color:after
+    {
+        content: '';
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top:0;
+        bottom: 50%;
+        left 100%;
+        background: rgba(0, 0, 0, 0);
+        z-index: -1;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+    .about-us
+    {
+        z-index: 101;
+        color: white;
+        font-size: 7vw;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .about-us
+    {
+        z-index: 101;
+        color: white;
+        font-size: 64px;
+        font-weight: bold;
+    }
+}
+.body-text
+{
+    z-index: 101;
+    color: white;
+    font-size: 18px;
+}
+
+.full-height
+{
+    height: 100%;
+}
+
+.blue
+{
+    color: #338699;
+}
+
+.purple
+{
+    color: #555a8b;
+}
